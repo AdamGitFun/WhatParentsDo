@@ -8,13 +8,14 @@
   <body>
 
     <div class="header">
-      <h1>What Parents Do</h1>
+      <h1 id="title">What Parents Do</h1>
     </div>
 
     <div class="question">
       <h1>As a non-parent, what did you do today?</h1>
       <br/>
-      <textarea id="inputText" rows="6" cols="65"></textarea>
+      <textarea id="inputText"></textarea>
+      <br/>
       <br/>
       <button class="btn" onclick="getParentAction()">Compute</button>
 
@@ -22,9 +23,9 @@
     </div>
 
     <div class="result">
-        <h1>If you were a parent, instead you...</h1>
+        <h1>If you were a parent, instead you would have...</h1>
         <br/>
-        <textarea id="resultText" rows="6" cols="65"></textarea>
+        <textarea id="resultText"></textarea>
         <br/>
     </div>
 
@@ -35,15 +36,21 @@
 
     function getParentAction() {
 
-      var result_possibilities = ["Went to Target",
-      "Went to Home Depot",
-      "Brought the kids to the park",
-      "Fought with your partner for no reason",
-      "Stayed at home"];
+      var input = document.getElementById("inputText").value;
 
-      var result = result_possibilities[Math.floor(Math.random()*result_possibilities.length)];
+      if (input == "") {
+        alert("You must enter what you did!");
+      } else {
+        var result_possibilities = ["Went to Target",
+        "Went to Home Depot",
+        "Brought the kids to the park",
+        "Fought with your partner for no reason",
+        "Stayed at home"];
 
-      document.getElementById("resultText").innerHTML = result;
+        var result = result_possibilities[Math.floor(Math.random()*result_possibilities.length)];
+
+        document.getElementById("resultText").innerHTML = result;
+      }
 
     }
 
