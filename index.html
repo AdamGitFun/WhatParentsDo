@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link href="./resources/css/style.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="resources/js/parents.js"></script>
     <title>What Parents Do</title>
   </head>
   <body>
@@ -31,34 +32,5 @@
 
     <h2></h>
   </body>
-
-  <script>
-
-    function getParentAction() {
-
-      var input = document.getElementById("inputText").value;
-
-      if (input == "") {
-        alert("You must enter what you did!");
-      } else {
-        var result_possibilities = ["Went to Target",
-        "Gone to Home Depot.",
-        "Brought the kids to the park.",
-        "Gone grocery shopping...again",
-        "Fought with your partner for no reason, but it was likely catalyzed by having children.",
-        "Argued about who got to run the errands alone.",
-        "Googled how to remove vomit smell from...",
-        "Clipped tiny fingernails.",
-        "Thought about touching your partner but got too tired.",
-        "Stayed at home."];
-
-        var result = result_possibilities[Math.floor(Math.random()*result_possibilities.length)];
-
-        document.getElementById("resultText").innerHTML = result;
-      }
-
-    }
-
-  </script>
 
 </html>
