@@ -18,6 +18,7 @@ function getParentAction() {
     "Googled how to remove vomit smell from...",
     "Clipped tiny fingernails.",
     "Thought about touching your partner but got too tired.",
+    "Passed out cold while trying to help another human sleep.",
     "Stayed at home."];
 
     var result = result_possibilities[Math.floor(Math.random()*result_possibilities.length)];
